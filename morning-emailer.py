@@ -33,7 +33,8 @@ July 14, 2019.    Jeffrey Neil Willits, W: jnwillits.com \
 """
 
 sg.ChangeLookAndFeel('Dark')
-sg.SetOptions(icon='emailer_bpu_icon.ico', element_padding=(2, 7), font=('verdana', 8), text_color='#FFFAFA', button_color=('#FFFFFF', '#565656'),
+sg.SetOptions(icon='emailer_bpu_icon.ico', element_padding=(2, 7), font=('verdana', 8),
+              text_color='#FFFAFA', button_color=('#FFFFFF', '#565656'),
               background_color='#1E1E1E', text_element_background_color='#1E1E1E')
 
 email_dist = []
@@ -66,7 +67,8 @@ layout = [
     [sg.Listbox(email_dist, change_submits=True, bind_return_key=True, size=(
         30, 7), key='_EMAILS_'), sg.T(''), sg.Multiline(about_info, size=(250, 1))],
     [sg.Button('Add Email', size=t2), sg.T('', size=t1, key='_ADD_EMAIL_')],
-    [sg.Button('Remove Email', size=t2), sg.T('', size=(70, 1), key='_REMOVE_EMAIL_'), sg.Button('Send', size=t2), sg.T('', key='_SEND_')], ]
+    [sg.Button('Remove Email', size=t2), sg.T('', size=(70, 1), key='_REMOVE_EMAIL_'),
+         sg.Button('Send', size=t2), sg.T('', key='_SEND_')], ]
 
 
 def delete_email_form(email_dist_pass):
